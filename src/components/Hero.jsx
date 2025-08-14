@@ -1,6 +1,6 @@
 import React from "react";
 import profileImg from "../assets/profile.png";
-import Typed from "react-typed";
+import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
@@ -55,13 +55,17 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-800 drop-shadow-md">
             Hi, I'm <span className="text-red-600">Mohammed Tawfeeq</span>
           </h1>
-          <Typed
-            strings={["Front-End Developer", "UI/UX Designer"]}
-            typeSpeed={50}
-            backSpeed={30}
-            loop
-            className="text-2xl md:text-3xl text-red-500 font-semibold"
-          />
+          <span className="text-2xl md:text-3xl text-red-500 font-semibold">
+            <Typewriter
+              words={["Front-End Developer", "UI/UX Designer"]}
+              loop={0} // 0 = infinite
+              cursor
+              cursorStyle="|"
+              typeSpeed={50}
+              deleteSpeed={30}
+              delaySpeed={1500}
+            />
+          </span>
           <p className="text-lg max-w-xl mt-4 text-gray-600 mb-6">
             Crafting beautiful and responsive web interfaces using React and
             Tailwind CSS.
